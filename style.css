@@ -92,4 +92,5 @@ body {
 
     .nextTimeFrameSection, .nextTimeFrameSection > * {
         font-size: var(--font-small-mobile);
+    }
 }
