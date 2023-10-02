@@ -67,3 +67,9 @@ body {
 .label {
     opacity: .7;
 }
+
+@media screen and (max-width: 768px) {
+    .mainSection {
+        height: 80dvh;
+    }
+}

@@ -14,12 +14,12 @@ let currentTimeStamp;
 // Initialize variable for next change of time window
 let nextTargetTime;
 
-function updateCountdown(targetTime) {
+function updateCountdown() {
     // Get the current date and time
     const now = new Date();
 
     // Calculate the time difference
-    const timeDifference = targetTime - now;
+    const timeDifference = nextTargetTime - now;
 
     // Calculate hours, minutes, and seconds
     const hours = Math.floor(timeDifference / (1000 * 60 * 60)).toString().padStart(2, '0');;
@@ -118,6 +118,5 @@ function changeIcons() {
         $(".redIcon").css("display", "none");
         $(".yellowIcon").css("display", "none");
         $(".greenIcon").css("display", "block");
-
     }
 }
