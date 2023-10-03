@@ -19,7 +19,10 @@ function updateCountdown() {
     const now = new Date();
 
     // Calculate the time difference
-    const timeDifference = nextTargetTime - now;
+    let timeDifference = nextTargetTime - now;
+    if (timeDifference < 0) {
+        console.log(timeDifference);
+    }
 
     // Calculate hours, minutes, and seconds
     const hours = Math.floor(timeDifference / (1000 * 60 * 60)).toString().padStart(2, '0');;
@@ -59,7 +62,7 @@ function updateCountdown() {
         } else if (currentHour >= 19 && currentHour < 23) {
             color = "yellow";
             nextTargetTime = targetTimes.eveningTargetGreen;
-        } else if (currentHour >= 0 && currentHour < 6) {
+        } else if (currentHour >= 23 || (currentHour >= 0 && currentHour < 6)) {
             color = "green";
             nextTargetTime = targetTimes.morningTargetYellow;
         } else {

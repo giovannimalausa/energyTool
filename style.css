@@ -47,7 +47,7 @@ body {
     font-size: var(--font-big-desktop);
 }
 
-.redIcon svg path {
+.redIcon svg path, .redIcon svg polygon, .redIcon svg line {
     stroke: red;
 }
 
@@ -55,7 +55,7 @@ body {
     stroke: yellow;
 }
 
-.greenIcon svg path {
+.greenIcon svg path, .greenIcon svg polyline {
     stroke: green;
 }
 
@@ -77,9 +77,13 @@ body {
     opacity: .7;
 }
 
+.colorOfNextTimeFrame {
+    text-transform: uppercase;
+}
+
 @media screen and (max-width: 768px) {
     .mainSection {
-        height: 80dvh;
+        height: 100dvh;
     }
 
     .currentTimeFrameSection {
@@ -92,5 +96,10 @@ body {
 
     .nextTimeFrameSection, .nextTimeFrameSection > * {
         font-size: var(--font-small-mobile);
+    }
+
+    .currentTimeFrameLabel {
+        text-align: center;
+        line-height: 160%;
     }
 }
